@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings,  Users, Trophy, Flag, Newspaper, LogOut } from "lucide-react"
+import { Calendar, LayoutDashboard, Inbox, Search, Settings, LogOut } from "lucide-react"
 
 import {
   Sidebar,
@@ -21,9 +21,9 @@ import { ThemeToggle } from "./theme-toggle"
 // Menu items.
 const items = [
   {
-    title: "Home",
-    url: "#",
-    icon: Home,
+    title: "Dashboard",
+    url: "/",
+    icon: LayoutDashboard,
   },
   {
     title: "Inbox",
@@ -77,8 +77,7 @@ export function AppSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
-              <a href="#" className="flex items-center">
-                <span>Theme</span>
+              <a href="#" className="flex items-center w-100">
                 <span><ThemeToggle/></span>
               </a>
             </SidebarMenuButton>
