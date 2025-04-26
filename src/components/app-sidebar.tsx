@@ -1,4 +1,4 @@
-import { Calendar, LayoutDashboard, Inbox, Search, Settings, LogOut } from "lucide-react"
+import { Calendar, LayoutDashboard, History, Shield, Settings, LogOut, Tv } from "lucide-react"
 
 import {
   Sidebar,
@@ -26,25 +26,20 @@ const items = [
     icon: LayoutDashboard,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: "History",
+    url: "/history",
+    icon: History,
   },
   {
-    title: "Calendar",
+    title: "Live",
     url: "#",
-    icon: Calendar,
+    icon: Tv,
   },
   {
-    title: "Search",
+    title: "Ranking",
     url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
+    icon: Shield,
+  }
 ]
 
 export function AppSidebar() {
@@ -56,7 +51,7 @@ export function AppSidebar() {
       <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -90,14 +85,14 @@ export function AppSidebar() {
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
-          <SidebarMenuItem>
+          {/* <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <a href="/logout" className="flex items-center">
                 <LogOut className="mr-2 h-4 w-4" />
                 <span>Logout</span>
               </a>
             </SidebarMenuButton>
-          </SidebarMenuItem>
+          </SidebarMenuItem> */}
         </SidebarMenu>
       </SidebarFooter>
       <SidebarRail />
